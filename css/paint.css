@@ -16,52 +16,59 @@ body {
   border-bottom: 60px solid white;
 }
 
-.tag-1, #tag-2, #tag-3, #tag-4, #tag-5, #tag-6, #tag-7 {
+/* Simplify the selectors for the tag elements */
+.tag {
   position: absolute;
   top: 0;
   left: 0;
   width: 980px;
   height: 622px;
+  display: block; /* Move the display property to a common class */
+}
+
+/* Use a common class for the background image and z-index for all the tags */
+.tag-1, 
+#tag-2, 
+#tag-3, 
+#tag-4, 
+#tag-5, 
+#tag-6, 
+#tag-7 {
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 7;
 }
 
 .tag-1 {
-  background: url(../images/tag-1.png) no-repeat;
-  z-index: 7;
-  display: block;
+  background-image: url(../images/tag-1.png);
 }
 
-#wall #tag-2 {
-  background: url(../images/tag-2.png) no-repeat;
+#tag-2 {
+  background-image: url(../images/tag-2.png);
   z-index: 6;
-  display: block;
 }
 
-div#wall #tag-3.slick {
-  background: url(../images/tag-3.png) no-repeat;
+#wall #tag-3.slick {
+  background-image: url(../images/tag-3.png);
   z-index: 5;
-  display: block;
 }
 
-#wall #tag-4 {
-  background: url(../images/tag-4.png) no-repeat;
+#tag-4 {
+  background-image: url(../images/tag-4.png);
   z-index: 4;
-  display: block;
 }
 
-div#wall .parent #tag-5.slick {
-  background: url(../images/tag-5.png) no-repeat;
+.parent #tag-5.slick {
+  background-image: url(../images/tag-5.png);
   z-index: 3;
-  display: block;
 }
 
-div#wall div.parent div:last-child div#tag-6 {
-  background: url(../images/tag-6.png) no-repeat;
+.parent div:last-child #tag-6 {
+  background-image: url(../images/tag-6.png);
   z-index: 2;
-  display: block;
 }
 
-body div#wall div.parent div > #tag-7.slick {
-  background: url(../images/tag-7.png) no-repeat;
+body .parent > #tag-7.slick {
+  background-image: url(../images/tag-7.png);
   z-index: 1;
-  display: block;
 }
